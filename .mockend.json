@@ -79,7 +79,7 @@
       "string": {}
     },
     "price": {
-      "float": {
+      "int": {
         "min": 0,
         "max": 100000
       }
