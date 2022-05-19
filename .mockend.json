@@ -1,0 +1,106 @@
+{
+  "Category": {
+    "id": {
+      "int": {
+        "min": 1,
+        "max": 100000
+      }
+    },
+    "name": {
+      "string": {}
+    },
+    "description": {
+      "string": {}
+    },
+    "isPublic": {
+      "boolean": {}
+    },
+    "subCategories": {
+      "hasMany": "SubCategory"
+    }
+  },
+  "SubCategory": {
+    "id": {
+      "int": {
+        "min": 1,
+        "max": 100000
+      }
+    },
+    "name": {
+      "string": {}
+    },
+    "description": {
+      "string": {}
+    },
+    "isPublic": {
+      "boolean": {}
+    },
+    "category": {
+      "belongsTo": "Category"
+    },
+    "colors": {
+      "hasMany": "Color"
+    }
+  },
+  "Color": {
+    "id": {
+      "int": {
+        "min": 1,
+        "max": 100000
+      }
+    },
+    "name": {
+      "string": {}
+    },
+    "colorCode": {
+      "string": {}
+    },
+    "isPublic": {
+      "boolean": {}
+    },
+    "subCategory": {
+      "belongsTo": "SubCategory"
+    },
+    "products": {
+      "hasMany": "Products"
+    }
+  },
+  "Product": {
+    "id": {
+      "int": {
+        "min": 1,
+        "max": 100000
+      }
+    },
+    "name": {
+      "string": {}
+    },
+    "uuid": {
+      "string": {}
+    },
+    "price": {
+      "float": {
+        "min": 0,
+        "max": 100000
+      }
+    },
+    "image": {
+      "regexp": "https://picsum\\.photos/seed/[0-9]{5}/1920/1080"
+    },
+    "description": {
+      "loremSentences": {
+        "minLength": 100,
+        "maxLength": 200
+      }
+    },
+    "isPublic": {
+      "boolean": {}
+    },
+    "subCategory": {
+      "belongsTo": "SubCategory"
+    },
+    "color": {
+      "belongsTo": "Color"
+    }
+  }
+}
