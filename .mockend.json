@@ -14,10 +14,12 @@
     },
     "isPublic": {
       "boolean": {}
+    },
+    "subCategories": {
+      "hasMany": "Subcategory"
     }
-
   },
-  "SubCategory": {
+  "Subcategory": {
     "id": {
       "int": {
         "min": 1,
@@ -57,7 +59,7 @@
       "boolean": {}
     },
     "subCategory": {
-      "belongsTo": "SubCategory"
+      "belongsTo": "Subcategory"
     },
     "products": {
       "hasMany": "Products"
