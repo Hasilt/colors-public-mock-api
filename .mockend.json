@@ -96,9 +96,6 @@
     "isPublic": {
       "boolean": {}
     },
-    "subCategory": {
-      "belongsTo": "SubCategory"
-    },
     "color": {
       "belongsTo": "Color"
     }
