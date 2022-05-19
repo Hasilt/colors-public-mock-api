@@ -19,29 +19,7 @@
       "hasMany": "SubCategory"
     }
   },
-  "SubCategory": {
-    "id": {
-      "int": {
-        "min": 1,
-        "max": 100000
-      }
-    },
-    "name": {
-      "string": {}
-    },
-    "description": {
-      "string": {}
-    },
-    "isPublic": {
-      "boolean": {}
-    },
-    "category": {
-      "belongsTo": "Category"
-    },
-    "colors": {
-      "hasMany": "Color"
-    }
-  },
+  
   "Color": {
     "id": {
       "int": {
