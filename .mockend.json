@@ -14,12 +14,32 @@
     },
     "isPublic": {
       "boolean": {}
+    }
+
+  },
+  "SubCategory": {
+    "id": {
+      "int": {
+        "min": 1,
+        "max": 100000
+      }
     },
-    "subCategories": {
-      "hasMany": "SubCategory"
+    "name": {
+      "string": {}
+    },
+    "description": {
+      "string": {}
+    },
+    "isPublic": {
+      "boolean": {}
+    },
+    "category": {
+      "belongsTo": "Category"
+    },
+    "colors": {
+      "hasMany": "Color"
     }
   },
-  
   "Color": {
     "id": {
       "int": {
